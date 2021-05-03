@@ -1,0 +1,23 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Mutation {
+    createVehicle(brandName: String, launchDate: String, modelCode: String!, type: String!): Vehicle
+}
+
+type Query {
+    vehicle(id: ID): Vehicle
+    vehicles(count: Int): [Vehicle]
+}
+
+type Vehicle {
+    brandName: String
+    id: ID!
+    launchDate: String
+    modelCode: String
+    type: String
+}
